@@ -12,11 +12,23 @@ const App = () => {
     })
   }
 
+  const ok = () => {
+    store.dispatch({
+      type: 'OK'
+    })
+  }
+
+  const bad = () => {
+    store.dispatch({
+      type: 'BAD'
+    })
+  }
+
   return (
     <div>
       <button onClick={good}>hyvä</button> 
-      <button>neutraali</button> 
-      <button>huono</button>
+      <button onClick={ok}>neutraali</button> 
+      <button onClick={bad}>huono</button>
       <button>nollaa tilastot</button>
       <div>hyvä {store.getState().good}</div>
       <div>neutraali</div>
