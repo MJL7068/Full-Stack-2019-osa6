@@ -32,7 +32,11 @@ const AnecdoteList = (props) => {
 }
 
 const anecdotesToShow = ({anecdotes, filter}) => {
-  return anecdotes.filter(anecdote => anecdote.content.toLowerCase().includes(filter.toLowerCase()))
+  return anecdotes.filter(anecdote => 
+  {
+    return anecdote.content.toLowerCase().includes(filter.toLowerCase())
+  }
+  )
 }
 
 const mapStateToProps = (state) => {
