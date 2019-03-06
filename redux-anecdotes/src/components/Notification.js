@@ -8,18 +8,16 @@ const Notification = (props) => {
     borderWidth: 1
   }
 
-  //const { anecdotes, notifications } = props.store.getState()
-
   return (
     <div style={style}>
-      {props.notifications}
+      {props.notification}
     </div>
   )
 }
 
 const mapStateToProps = (state) => {
   return {
-    notifications: state.notifications
+    notification: state.notification
   }
 }
 
